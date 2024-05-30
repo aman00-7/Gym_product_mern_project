@@ -7,7 +7,7 @@ const router = require('./routes')
 
 const app=express()
 app.use(cors({
-    origin:process.env.FRONTEND_URL,
+    origin:process.env.FRONTEND_URL||FRONTEND_URL,
     credentials:true
 }))
 app.use(express.json())
